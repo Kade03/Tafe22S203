@@ -27,6 +27,7 @@ namespace Calculator
 			this.InitializeComponent();
 		}
 
+<<<<<<< HEAD
 		private void exitButton_Click(object sender, RoutedEventArgs e)
 		{
 			this.Frame.Navigate(typeof(MainMenu));
@@ -42,5 +43,7 @@ namespace Calculator
 		{
 			this.Frame.Navigate(typeof(MathsCalculator));
 		}
+=======
+>>>>>>> 4dbee0b7620a25ffce526ae6a32d2c9d56ff69e6
 	}
 }
