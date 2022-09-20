@@ -54,6 +54,10 @@ namespace Calculator
 			monthlyRepaymentTextBlock.Text = monthlyRepayment.ToString("C");
 		}
 
-		
+	
+		private void exitMorgageCalcBtnClick(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MainMenu));
+		}
 	}
 }

@@ -37,9 +37,10 @@ namespace Calculator
 			this.Frame.Navigate(typeof(MainMenu));
 		}
 
-		private void Button_Click_1(object sender, RoutedEventArgs e)
-		{
 
+		private void mortgageCalcButtonClick(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MortgageCalculator));
 		}
 	}
 }
