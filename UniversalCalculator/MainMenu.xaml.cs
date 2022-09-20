@@ -1,25 +1,46 @@
-﻿<Page
-    x:Class="Calculator.MainMenu"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Calculator"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 
-	<Grid Background="LightBlue">
-		<TextBlock HorizontalAlignment="Left" Margin="536,100,0,0" TextWrapping="Wrap" Text="Universal Calculator" VerticalAlignment="Top" Height="48" Width="221" FontSize="24"/>
-		<Button Content="Math calculator&#xD;&#xA;" Margin="0,206,0,0" VerticalAlignment="Top" FontSize="24" Height="42" HorizontalAlignment="Center" Click="mathsCalculatorButtonClick"/>
-		<Button Content="Mortgage Calculator&#xD;&#xA;" Margin="0,282,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Height="42" Click="mortgageCalcButtonClick"/>
-		<Button Content="Exit" Margin="0,360,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Click="exitButton_Click"/>
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-	<Grid Background="#FFAEFFFF">
-		<TextBlock HorizontalAlignment="Left" Margin="536,100,0,0" TextWrapping="Wrap" Text="Universal Calculator" VerticalAlignment="Top" Height="48" Width="221" FontSize="24"/>
-		<Button Content="Math calculator&#xD;&#xA;" Margin="0,206,0,0" VerticalAlignment="Top" FontSize="24" Height="42" HorizontalAlignment="Center" Click="Button_Click"/>
-		<Button Content="Mortgage Calculator&#xD;&#xA;" Margin="0,282,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Height="42" Click="Button_Click_1"/>
-		<Button Content="Currency Calculaor" Margin="0,360,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" Click="Button_Click_2"/>
-		<Button Content="Exit" Margin="0,460,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Click="Button_Click_3"/>
-		<Image Source="images/abacus.PNG" Margin="1055,-282,82,282" />
-	</Grid>
-</Page>
+namespace Calculator
+{
+	/// <summary>
+	/// An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class MainMenu : Page
+	{
+		public MainMenu()
+		{
+			this.InitializeComponent();
+		}
+
+		private void exitButton_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MainMenu));
+		}
+
+
+		private void mortgageCalcButtonClick(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MortgageCalculator));
+		}
+
+		private void mathsCalculatorButtonClick(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MathsCalculator));
+		}
+	}
+}
