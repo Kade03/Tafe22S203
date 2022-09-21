@@ -8,10 +8,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-	<Grid Background="LightBlue">
-		<TextBlock HorizontalAlignment="Left" Margin="536,100,0,0" TextWrapping="Wrap" Text="Universal Calculator" VerticalAlignment="Top" Height="48" Width="221" FontSize="24"/>
-		<Button Content="Math calculator&#xD;&#xA;" Margin="0,206,0,0" VerticalAlignment="Top" FontSize="24" Height="42" HorizontalAlignment="Center" Click="mathsCalculatorButtonClick"/>
-		<Button Content="Mortgage Calculator&#xD;&#xA;" Margin="0,282,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Height="42" Click="mortgageCalcButtonClick"/>
-		<Button Content="Exit" Margin="0,360,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Click="exitButton_Click"/>
-	</Grid>
+    <Grid Background="LightBlue">
+        <TextBlock HorizontalAlignment="Left" Margin="536,100,0,0" TextWrapping="Wrap" Text="Universal Calculator" VerticalAlignment="Top" Height="48" Width="221" FontSize="24"/>
+        <Button Content="Math calculator&#xD;&#xA;" Margin="0,206,0,0" VerticalAlignment="Top" FontSize="24" Height="42" HorizontalAlignment="Center" Click="mathsCalculatorButtonClick"/>
+        <Button Content="Mortgage Calculator&#xD;&#xA;" Margin="0,282,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Height="42" Click="mortgageCalcButtonClick"/>
+        <Button Content="Exit" Margin="0,468,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Click="exitButton_Click"/>
+        <Button Content="Trip Calculator" Margin="0,372,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" Height="42" Click="TripCalcButtonClick"/>
+        <TextBlock x:Name="tripCalcTextBlock" HorizontalAlignment="Left" Margin="863,372,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Height="93" Width="421" FontSize="24"/>
+    </Grid>
 </Page>
