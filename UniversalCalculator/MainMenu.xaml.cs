@@ -42,5 +42,10 @@ namespace Calculator
 		{
 			this.Frame.Navigate(typeof(MathsCalculator));
 		}
+
+		private void TripCalcButtonClick(object sender, RoutedEventArgs e)
+		{
+			tripCalcTextBlock.Text = "Trip calculator C# code will be developed later".ToString();
+		}
 	}
 }
